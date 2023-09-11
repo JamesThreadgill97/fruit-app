@@ -56,5 +56,16 @@ Module Bundler
     - Vite
     - Rollout
     - Parcel
-    - Watchify
-    
+    - Watchify - npm Development Package, only needed in production
+        - npm init -y
+        - npm i -D Watchify
+        - create a script in package.json 
+        - `"dev": "watchify ./script.js -o bundle.js",`
+            - -o means output
+        - npm run dev
+        - this creates the bundle.js file 
+        - import this bundle.js in the html file
+            - `<script src="bundle.js"></script>
+
+
+!! to have the script html import tag in the header, you MUST put `defer` before the src !!

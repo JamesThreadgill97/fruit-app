@@ -1,3 +1,6 @@
-const x = require("./script2");
+const fruitForm = document.querySelector("#inputSection form");
 
-console.log("hello", x)
+fruitForm.addEventListener(`submit`, (e) => {
+    e.preventDefault();
+    console.log(e)
+})
