@@ -69,3 +69,36 @@ Module Bundler
 
 
 !! to have the script html import tag in the header, you MUST put `defer` before the src !!
+
+
+APPLICATION PROGRAMMING INTERFACE (API) - Web services/Server
+    - User is the Customer
+    - Application is the kitchen
+    - API would be the server 
+        - Server takes your order 
+        - Takes order to kitchen
+        - Kitchen gives server your order
+        - Server then delivers your order to you
+- communcation between one service and another service 
+    - can recieve data from one service and use that data in your client 
+
+ASYNCHRONOUS OPERATIONS
+    - Operation will happen in the future, but not right now 
+    - E.g. fetching data from a server/api 
+    - Sometimes, you do not know how long an API will return data back to you
+    - Cannot mak javascript wait around for a response - it would block the UI
+    - Give JS a function to execute when you finally get a response - CALLBACK 
+
+EVENT LOOP 
+
+PROMISES 
+- States
+    - pending -> promise has been created and the async function associated with that promise has not succeeded or failed yet
+    - fulfilled -> when the async function has succeeded -> `.then()`
+    - rejected -> the async function has failed -> `.catch()`
+    .then and .catch can chain on the fetch
+fetch("api-url")
+
+.then - function you call if the promise is successful
+.catch - the function you call if the promise is unsuccessful
+.finally - not often used.
