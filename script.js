@@ -10,13 +10,15 @@ function extractFruit(e) {
     e.preventDefault();
     let fruit = e.target.fruitInput.value;
     if (fruit) {
-        addFruit(fruit)
+        fetchFruitData(fruit);
         e.target.fruitInput.value = ""
+        addFruit(fruit)
     }
     
 }
 // Function that add the user inputted value into a li in section with the ul tag
 function addFruit(fruit) {
+    console.log(fruit);
     // Create a list element
     const li = document.createElement(`li`)
     // Give that list element some text
