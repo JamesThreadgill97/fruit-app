@@ -1,0 +1,60 @@
+FRONT END DEVELOPMENT
+
+- Piece of software that the user can interact with
+
+
+- Web vs Internet
+    - Internet - physical infrastrcture (global network of networks)
+    - Web - communication layer that sits on top of the Internet
+
+- Who invented the web?
+    - Sir Tim Berners Lee
+
+- Client (browser) -> HTTP Request -> Server (backend)
+- Server -> HTTP Response -> Client
+
+- Anatomy of the Web:
+    - Client -> Browser -> Piece of software whoes job it is to send requests for information and interpret and display the info in a human freightly way
+    - HTTP -> Hyper Text Transfer Protocol -> Standard rules created for sharing information across the Internet
+    - Server -> A service tha is listerning for requests and sends back responses
+
+- The DOM is the representation of the html
+
+JS In The Browser
+
+- Manipulate the DOM 
+    - querySelector - Selects element from the DOM and then apply manipulations (styling, content, structure)
+    - eg. document.querySelector(`element`).style.backgroundColor = `color`
+- innerHTML vs textContent
+    - innerHTML can alter the entire html markup of an element
+    - textContent only alters the text within an element
+- querySelectorAll
+    - Selects all elements of the same tag to allow manipulations, returns a node array and so requires a loop too apply manipulations to the elements  
+        - eg. document.querySelectorAll(".red").forEach(el => el.style.color= "red")
+            - this line selects all elements that has the class tag of "red". the forEach loop goes through each element in the node array (el) and applies the desired modification to each of them (el.style.color = "red")
+
+
+DOM Events
+- Event listeners - addEventListener(`event`, callback with code that you want to execute on that event)
+    - Click
+    - Submit
+    - Mouse enter 
+    - Mouse leave
+    -Load
+    e.target -> allow you to grab the element that the event listener on
+    e.preventDefault() -> prevents the page from reloading
+- eg. document.querySelector("h1"),addEventListener("mouseenter", (e) => {altert("Hi there!")})
+
+
+Module Bundler
+
+- Package up all scripts and bundle it into one script
+- Avoiding importing several indiviual JS scripts
+- Allow us to use  `requre` in client-side JS
+- E.g. 
+    - Webpack
+    - Vite
+    - Rollout
+    - Parcel
+    - Watchify
+    
