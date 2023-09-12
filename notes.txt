@@ -102,3 +102,31 @@ fetch("api-url")
 .then - function you call if the promise is successful
 .catch - the function you call if the promise is unsuccessful
 .finally - not often used.
+
+
+
+fetching :
+
+async function :
+
+async function 'functionName'() {
+    try {
+        const response = await fetch('api link')
+
+        if (response.ok) {
+            const data = await resp.json();
+        } else {
+            throw "Error: http status code = " + response.status
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+create a function to declare the data
+
+const dataFunction(data) {
+    /*Best to console.log the data to match sure it's been fetched properly*/
+    console.log(data);
+}
